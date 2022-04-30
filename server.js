@@ -16,10 +16,9 @@ app.use(express.static("public"));
 app.use(expressLayouts);
 
 mongoose.connect(process.env.DATABASE_URL);
-
 const db = mongoose.connection;
+db.on("error", (error) => console.log("connection error"));
+db.once("open", () => console.log("connected to MongoDB"));
 
 app.use("/", index);
-app.listen(3000, () => {
-  console.log("Server listening on port 3000...");
-});
+app.listen(process.env.PORT || 3000);
