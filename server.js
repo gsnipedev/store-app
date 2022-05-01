@@ -22,6 +22,7 @@ app.set("views", "views");
 app.use(express.static("public"));
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
+app.get("/", index);
 app.use("/", index);
 app.use("/", login);
 app.listen(process.env.PORT || 3000);
