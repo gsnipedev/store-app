@@ -6,7 +6,7 @@
     >
       <div class="container">
         <div class="row">
-          <div class="col-md-4 text-light d-flex flex-column justify-content-center">
+          <div class="col-md-4 text-light d-flex flex-column justify-content-center pt-2">
             <span class="fs-3 oswald">Find anything you want in Gshop</span>
             <br />
             <span class="fs-4 ubuntu">we sell anything</span>
@@ -17,7 +17,9 @@
               recusandae numquam!</span
             >
             <hr />
-            <button type="button" class="btn btn-light text-danger ubuntu mb-2">Explore now</button>
+            <button type="button" class="btn btn-light text-danger ubuntu mb-2" onclick="location.href = '/discover'">
+              Explore now
+            </button>
           </div>
           <div class="col-md-8">
             <div class="float-end mb-2">
@@ -50,8 +52,10 @@
 <section id="product-section">
   <div class="container">
     <div class="row">
-      <% for( let index = 0; index < items.length; index++ ) { %> <%- include('./partials/itemcard.ejs', {index: index})
-      %> <% } %>
+      <% items.forEach((element, index) => { %> <%- include('./partials/itemcard.ejs', {element: element}) %> <% }) %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button type="button" id="ldmore" class="btn bg-orange text-light ubuntu">Load More</button>
     </div>
   </div>
 </section>

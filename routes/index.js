@@ -6,11 +6,15 @@ mongoose.connect(process.env.DATABASE_URL);
 
 router.get("/", async (req, res) => {
   try {
-    const items = await Items.find({});
+    const items = await Items.find({}).limit(4);
     res.render("index.ejs", { msg: "this is item", items: items });
   } catch (error) {
     res.redirect("/");
   }
+});
+router.get("/", async (req, res, next) => {
+  console.log("hi");
+  next();
 });
 
 router.get("/about", async (req, res) => {
@@ -29,7 +33,7 @@ router.get("/discover", async (req, res) => {
 router.get("/discover/:segment", async (req, res) => {
   try {
     const items = await Items.find({});
-    res.render("item_detail.ejs", { msg: "this is item", items: items });
+    res.render("item_detail.ejs", { msg: "this is item" });
   } catch (error) {
     res.redirect("/");
   }

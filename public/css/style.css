@@ -11,15 +11,28 @@
 .oswald{
     font-family: 'Oswald', sans-serif;
 }
-.item-card{
+.item-card > img{
     transition: 0.3s;
 }
-.item-card:hover{
+.item-card > img:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
 .bg-orange{
     background-color: #f06543
+}
+.border-orange{
+    border: 4px solid #f06543;
+}
+.admin-menu-list > li > a{
+    text-decoration: none;
+    color: white;
+}
+.admin-menu-list > li > a:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    border-left: 4px solid white;
 }
 
 body{

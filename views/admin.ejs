@@ -1,1 +1,80 @@
-<h1>this is admin page</h1>
+<section class="m-3">
+  <div class="container">
+    <div class="row d-flex justify-content-between">
+      <div class="col-md-3 bg-orange p-2 rounded-3 shadow mb-5">
+        <div class="p-4 text-light ubuntu fs-5 admin-menu-list">
+          <ul class="nav flex-column admin-menu-list">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page">General</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Items Management</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">smth</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="col-md-4 p-2 mb-5 border-orange shadow bg-light rounded-3 d-flex align-items-center justify-content-center"
+      >
+        <div class="ubuntu">
+          <div class="col-12 text-light p-3 rounded-3" style="border: 3px solid white">
+            <form method="POST" action="/admin" enctype="multipart/form-data">
+              <div class="mb-3">
+                <span class="text-secondary">Add new item</span>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Item Name" name="itemname" />
+              </div>
+              <div class="mb-3">
+                <textarea name="itemdesc" id="" rows="6" class="form-control" placeholder="Description"></textarea>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Price" name="item_price" />
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="form-label text-secondary">Item Image</label>
+                <input class="form-control" type="file" id="formFile" name="image_upload" />
+              </div>
+              <button type="submit" class="btn bg-orange text-light" style="border: 2px solid white">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 p-4 rounded-3">
+        <div class="row bg-primary rounded-3 text-light p-3 shadow">
+          <h1 class="text-center ubuntu">912</h1>
+          <h4 class="text-center ubuntu">Orders</h4>
+        </div>
+        <div class="row bg-success rounded-3 text-light p-3 shadow mt-3">
+          <h1 class="text-center ubuntu">$ 145</h1>
+          <h4 class="text-center ubuntu">Revenue</h4>
+        </div>
+        <div class="row bg-secondary rounded-3 text-light p-3 shadow mt-3">
+          <h1 class="text-center ubuntu">512</h1>
+          <h4 class="text-center ubuntu">Comments</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

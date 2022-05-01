@@ -3,6 +3,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+
 mongoose.connect(process.env.DATABASE_URL);
 const db = mongoose.connection;
 db.once("open", () => {
@@ -14,6 +15,7 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const index = require("./routes/index");
 const login = require("./routes/login");
+const admin = require("./routes/admin");
 
 app.set("view engine", "ejs");
 app.set("layout", "layouts/layout");
@@ -25,4 +27,5 @@ app.use(bodyParser.urlencoded({ limit: "10mb", extended: false }));
 app.get("/", index);
 app.use("/", index);
 app.use("/", login);
+app.use("/", admin);
 app.listen(process.env.PORT || 3000);

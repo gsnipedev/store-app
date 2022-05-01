@@ -32,8 +32,7 @@
 <section id="product-section">
   <div class="container">
     <div class="row">
-      <% for( let index = 0; index < items.length; index++ ) { %> <%- include('./partials/itemcard.ejs', {index: index})
-      %> <% } %>
+      <% items.forEach((element, index) => { %> <%- include('./partials/itemcard.ejs', {element: element}) %> <% }) %>
     </div>
   </div>
 </section>

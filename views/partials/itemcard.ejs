@@ -1,10 +1,16 @@
-<div class="col-6 col-lg-3 mb-5" onclick="location.href = '/discover/<%= items[index]._id %>'">
-  <div class="card item-card border rounded-3 shadow bg-transparent p-1" style="width: auto">
-    <img src="<%= items[index].image_url %> " class="card-img-top img-fluid rounded-3" width="100px" alt="product" />
-    <div class="card-body">
-      <p class="card-text oswald"><%= items[index].item_name %></p>
-      <span class="ubuntu text-success">$ <%= items[index].item_price %> </span>
-      <p><%= items[index].item_desc %></p>
+<div class="col-6 col-lg-3 mb-5">
+  <div class="item-card rounded-3 p-1">
+    <img
+      src="<%= element.image_url %> "
+      class="card-img-top rounded-3 shadow"
+      alt="product"
+      style="aspect-ratio: 1/1; height: 1"
+      onclick="location.href = '/discover/<%= element._id %>'"
+    />
+    <div class="card-body bg-light border rounded-3">
+      <p class="card-text oswald"><%= element.item_name %></p>
+      <span class="ubuntu text-success">$ <%= element.item_price %> </span>
+      <p><%= element.item_desc %></p>
     </div>
   </div>
 </div>
