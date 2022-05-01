@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row">
+    <div
+      class="col-md-3 shadow d-flex flex-column border rounded-3 bg-orange text-light"
+      style="background-image: url(https://i.ytimg.com/vi/c7oV1T2j5mc/maxresdefault.jpg)"
+    >
+      <div class="mt-5 mb-2 align-self-center ubuntu">
+        <h3>Login</h3>
+        <hr />
+      </div>
+      <div class="align-self-center ubuntu">
+        <span><%= locals.msg %></span>
+      </div>
+
+      <form method="POST" action="/login">
+        <div class="mb-3 ubuntu">
+          <label for="exampleInputEmail1" class="form-label">Email or Username</label>
+          <input type="text" name="username" class="form-control shadow-none" />
+          <div id="emailHelp" class="form-text text-light">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label shadow-none">Password</label>
+          <input type="password" class="form-control" name="password" />
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input shadow-none" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="form-control btn btn-light oswald">Login here</button>
+      </form>
+      <hr />
+      <div class="align-self-center text-light ubuntu">
+        <p>Don't have account yet? Register <a href="/login/register">here</a></p>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <img src="https://picsum.photos/1920/1080" class="img-fluid rounded-3 shadow" alt="" />
+    </div>
+  </div>
+</div>

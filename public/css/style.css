@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
 .ubuntu{
     font-family: 'Ubuntu', sans-serif;
+}
+.playfair{
+    font-family: 'Playfair Display', serif;
+}
+.oswald{
+    font-family: 'Oswald', sans-serif;
+}
+.item-card{
+    transition: 0.3s;
+}
+.item-card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.bg-orange{
+    background-color: #f06543
+}
+
+body{
+    height: 400vh;
 }

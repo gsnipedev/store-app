@@ -1,1 +1,57 @@
-<%= msg %>
+<section>
+  <div class="m-3">
+    <div
+      class="rounded-3 d-flex align-items-center shadow"
+      style="min-height: 60vh; width: 100%; background-color: #f06543; z-index: 1"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 text-light d-flex flex-column justify-content-center">
+            <span class="fs-3 oswald">Find anything you want in Gshop</span>
+            <br />
+            <span class="fs-4 ubuntu">we sell anything</span>
+            <br />
+            <span class="fs-6 ubuntu"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, ex cupiditate recusandae sunt hic saepe!
+              Repellendus magni vero maxime similique eaque? Quod nesciunt repellendus, iusto debitis magnam eius
+              recusandae numquam!</span
+            >
+            <hr />
+            <button type="button" class="btn btn-light text-danger ubuntu mb-2">Explore now</button>
+          </div>
+          <div class="col-md-8">
+            <div class="float-end mb-2">
+              <img src="img/hero_bg.jpg" alt="" width="550" class="img-fluid rounded-3 shadow" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" style="transform: translateY(-25px)">
+      <div
+        class="rounded-circle text-center d-flex justify-content-center"
+        style="height: 50px; width: 50px; background-color: white; border: 4px solid #f06543"
+      >
+        <i class="fa-solid fa-angle-down align-self-center fs-3" style="color: #f06543"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= %>
+
+<section>
+  <div class="container text-center ubuntu">
+    <h1>Products</h1>
+    <hr />
+  </div>
+</section>
+
+<section id="product-section">
+  <div class="container">
+    <div class="row">
+      <% for( let index = 0; index < items.length; index++ ) { %> <%- include('./partials/itemcard.ejs', {index: index})
+      %> <% } %>
+    </div>
+  </div>
+</section>

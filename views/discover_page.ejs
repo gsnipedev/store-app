@@ -1,0 +1,39 @@
+<section>
+  <div class="container mt-5">
+    <div class="row" style="display: grid; place-items: center">
+      <div class="col-md-6 d-flex flex-column">
+        <div class="align-self-center ubuntu">
+          <h3>Discover anything</h3>
+
+          <hr />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            name="product_search"
+            class="form-control shadow-none"
+            placeholder="Finds what you wish"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mt-5 mb-5">
+    <div class="text-center ubuntu">
+      <h1>Products</h1>
+    </div>
+    <hr />
+  </div>
+</section>
+
+<section id="product-section">
+  <div class="container">
+    <div class="row">
+      <% for( let index = 0; index < items.length; index++ ) { %> <%- include('./partials/itemcard.ejs', {index: index})
+      %> <% } %>
+    </div>
+  </div>
+</section>
