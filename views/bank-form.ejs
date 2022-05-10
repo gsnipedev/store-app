@@ -1,0 +1,45 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xxl-7">
+        <div class="p-4 rounded-3">
+          <div class="poppin">
+            <div class="mb-4 text-center">
+              <span class="fs-4 text-orange">Select Bank</span>
+            </div>
+
+            <div class="row mb-3 bank-selector">
+              <div class="col-md-4">
+                <form action="/pay/bankTransfer" method="POST">
+                  <input type="hidden" name="item_id" value="<%- item_id %> " />
+                  <input type="hidden" name="bank_name" value="bri" />
+                  <div class="form-check shadow-sm p-3 text-center rounded-3">
+                    <input type="image" src="img/payment/bri.png" alt="" height="50" />
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4">
+                <form action="/pay/bankTransfer" method="POST">
+                  <input type="hidden" name="item_id" value="<%- item_id %> " />
+                  <input type="hidden" name="bank_name" value="bni" />
+                  <div class="form-check shadow-sm p-3 text-center rounded-3">
+                    <input type="image" src="img/payment/bni.png" alt="" height="50" />
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-4">
+                <form action="/pay/bankTransfer" method="POST">
+                  <input type="hidden" name="item_id" value="<%- item_id %> " />
+                  <input type="hidden" name="bank_name" value="bca" />
+                  <div class="form-check shadow-sm p-3 text-center rounded-3">
+                    <input type="image" src="img/payment/bca.png" alt="" height="50" />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

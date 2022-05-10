@@ -1,0 +1,87 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 p-4 pt-0">
+        <div class="shadow p-4 rounded-3" style="top: 50px; position: sticky">
+          <div class="d-flex flex-column align-items-center mb-2">
+            <div
+              style="border: 4px solid #f06543; overflow: hidden"
+              class="rounded-circle position-relative d-flex justify-content-center align-items-center account-profile-image"
+            >
+              <img src="<%= profile_image  %> " alt="" width="200" height="200" />
+              <span class="position-absolute poppin fs-3 text-light">Upload</span>
+            </div>
+
+            <div
+              class="badge rounded-pill bg-light text-orange fs-6 rounded-circle"
+              style="transform: translateY(-17px); border-top: 4px solid #f06543"
+            >
+              <%= rank %>
+            </div>
+          </div>
+          <div class="text-center mb-2">
+            <span class="badge text-orange fs-4" style="border-bottom: 4px solid #f06543"><%= username %> </span>
+            <div>
+              <span class="text-secondary roboto">The Auditor</span>
+            </div>
+          </div>
+          <div class="user-setting-menu">
+            <div class="mb-1 p-2 rounded-3">
+              <span class="poppin">Google</span>
+              <span class="float-end ubuntu text-secondary">Connect</span>
+            </div>
+
+            <div class="mb-1 p-2 rounded-3">
+              <span class="poppin">Paypal</span>
+              <span class="float-end ubuntu text-secondary">Connect</span>
+            </div>
+            <div class="mb-1 p-2 rounded-3">
+              <span class="poppin">Remaining Balance</span>
+              <span class="float-end poppin text-success">$9999</span>
+            </div>
+
+            <hr />
+            <div class="mb-1 p-2 rounded-3">
+              <span class="poppin">Change Password</span>
+            </div>
+            <div class="mb-1 p-2 rounded-3" onclick="location.href='/logout' ">
+              <span class="poppin">Logout</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-8 p-4 pt-0">
+        <div class="p-4 rounded-3 shadow h-100">
+          <div class="text-center mb-2 poppin">
+            <span>Pending Transaction</span>
+          </div>
+          <div class="row">
+            <% response.forEach((element,index) => { %>
+
+            <div class="col-md-6 p-2">
+              <div class="p-4 border rounded-3 shadow-sm">
+                <div class="mb-4">
+                  <img src="img/payment/<%= element.platform_name %>.png" alt="" height="50" />
+                </div>
+                <div class="mb-4">
+                  <span class="ubuntu">Virtual Account Number</span>
+                  <h5 class="poppin fs-5"><%- element.va_number %></h5>
+                </div>
+                <div class="mb-4">
+                  <span class="ubuntu">Total Payment</span>
+                  <h5 class="poppin fs-5 text-success"><%= format.format(element.gross_amount) %></h5>
+                </div>
+                <div>
+                  <a href="" style="text-decoration: none">
+                    <span class="poppin text-orange">Details</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

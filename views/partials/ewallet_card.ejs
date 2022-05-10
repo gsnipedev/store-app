@@ -1,0 +1,12 @@
+<div class="col-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column justify-content-center">
+  <div class="p-4 shadow-sm rounded-3 d-flex align-items-center justify-content-center mb-3" style="aspect-ratio: 1/1">
+    <form action="/pay/eMoney/" method="GET">
+      <input type="hidden" name="item_id" value="<%- result.item_id %> " />
+      <input type="hidden" name="eMoneyName" value="gopay" />
+      <input type="image" src="img/payment/gopay.png" alt="" class="img-fluid" />
+    </form>
+  </div>
+  <div class="text-center poppin text-orange">
+    <span class="fs-5"> E-Wallet </span>
+  </div>
+</div>

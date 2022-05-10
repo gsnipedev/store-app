@@ -1,16 +1,28 @@
-<div class="col-6 col-lg-3 mb-5">
-  <div class="item-card rounded-3 p-1">
+<div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-5">
+  <div
+    class="item-card item-card-<%= index %> rounded-3 shadow p-1 h-100"
+    style="overflow: hidden"
+    onclick="location.href = '/discover/<%= element.item_id %>'"
+  >
     <img
-      src="<%= element.image_url %> "
-      class="card-img-top rounded-3 shadow"
+      src="<%= element.item_image %> "
+      class="card-img-top img-thumbnail rounded-3"
       alt="product"
-      style="aspect-ratio: 1/1; height: 1"
-      onclick="location.href = '/discover/<%= element._id %>'"
+      style="aspect-ratio: 10/9"
     />
-    <div class="card-body bg-light border rounded-3">
-      <p class="card-text oswald"><%= element.item_name %></p>
-      <span class="ubuntu text-success">$ <%= element.item_price %> </span>
-      <p><%= element.item_desc %></p>
+    <div class="card-body p-2">
+      <div style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap">
+        <span class="card-text poppin"><%= element.item_name %> </span>
+      </div>
+      <div style="height: 50px">
+        <div>
+          <span style="font-size: 13px" class="text-secondary">category</span>
+        </div>
+        <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
+          <span style="font-size: 14px"><%= element.item_desc %></span>
+        </div>
+      </div>
+      <span class="ubuntu text-success">$ <%= element.price %> </span>
     </div>
   </div>
 </div>

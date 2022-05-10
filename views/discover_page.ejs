@@ -8,12 +8,7 @@
           <hr />
         </div>
         <div class="mb-3">
-          <input
-            type="email"
-            name="product_search"
-            class="form-control shadow-none"
-            placeholder="Finds what you wish"
-          />
+          <input type="text" name="product_search" class="form-control shadow-none" placeholder="Finds what you wish" />
         </div>
       </div>
     </div>
@@ -32,7 +27,12 @@
 <section id="product-section">
   <div class="container">
     <div class="row">
-      <% items.forEach((element, index) => { %> <%- include('./partials/itemcard.ejs', {element: element}) %> <% }) %>
+      <% items.forEach((element, index) => { %> <%- include('./partials/itemcard.ejs', {element: element, index}) %> <%
+      }) %>
     </div>
   </div>
 </section>
+
+<script>
+  document.getElementsByClassName("item-card-1").remove;
+</script>

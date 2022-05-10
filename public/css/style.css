@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+body{
+    height: 300vh;
+}
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
 .ubuntu{
     font-family: 'Ubuntu', sans-serif;
 }
@@ -11,18 +19,36 @@
 .oswald{
     font-family: 'Oswald', sans-serif;
 }
+.poppin{
+    font-family: 'Poppins', sans-serif;
+}
+.box-shadow-sm{
+    box-shadow: 5px 5px gray;
+}
+.item-card{
+    border-bottom: 5px solid #f06543;
+}
+.item-card:hover{
+    cursor: pointer;
+}
 .item-card > img{
     transition: 0.3s;
 }
 .item-card > img:hover{
     transform: scale(1.05);
-    cursor: pointer;
 }
+
 .bg-orange{
     background-color: #f06543
 }
+.text-orange{
+    color: #f06543
+}
 .border-orange{
     border: 4px solid #f06543;
+}
+.border-orange-sm{
+    border: 2px solid #f06543;
 }
 .admin-menu-list > li > a{
     text-decoration: none;
@@ -34,7 +60,151 @@
     color: white;
     border-left: 4px solid white;
 }
-
-body{
-    height: 400vh;
+.comment-section-text{
+    transition: 0.3s;
 }
+
+.comment-section-text:hover{
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px gray;
+    cursor: pointer;
+}
+.comment-section-text:active{
+    transition: 0.1s;
+    transform: translate(0px, 0px);
+    box-shadow: none;
+}
+
+.suggestions-image-container > div > div > img{
+    transition: 0.3s;
+}
+.suggestions-image-container > div > div > img:hover{
+    cursor: pointer;
+    transform: translate(-5px, -5px);
+    filter: drop-shadow(5px 5px 1px #f06543);
+    
+    
+}
+.suggestions-image-container > div > div > img:active{
+    transition: 0.1s;
+    transform: translate(0px, 0px);
+    filter: none;
+}
+.account-user-display{
+    transition: 0.3s;
+    border: 2px solid white;
+}
+.account-user-display:hover{
+    transform: translate(-5px, -5px);
+    background-color: #f06543;
+    filter: drop-shadow(5px 5px 0px #fff);
+    
+    cursor: pointer;
+}
+.account-user-display:active {
+    transition: 0.1s;
+    transform: translate(0px, 0px);
+    filter: none;
+}
+.account-profile-image > img{
+    transition: 0.2s;
+   
+}
+.account-profile-image > span{
+    transition: 0.3s;
+    transform: translateY(10px);
+    -webkit-text-stroke: 1px #f06543;
+    opacity: 0;
+}
+.account-profile-image:hover{
+    cursor: pointer;
+}
+.account-profile-image:hover > img{
+    filter: blur(5px);
+}
+.account-profile-image:hover > span{
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+.profile-menu-button{
+    position: relative;
+    min-width: 150px;
+    max-width: max-content;
+}
+.profile-menu-button > :nth-child(2){
+    height: 0;
+    width: 100%;
+    position: absolute;
+    transition: 0.4s;
+    visibility:hidden;
+    background-color: #f06543;
+    border-bottom: 3px solid #f06543;
+    overflow: hidden;
+    z-index: 9999999;
+}
+.profile-menu-button > :nth-child(2) > *{
+    list-style-type: none;
+    cursor: pointer;
+}
+.profile-menu-button > :nth-child(2) > ul > li > a{
+    display: block;
+}
+.profile-menu-button > :nth-child(2) > ul > li > *{
+    text-decoration: none;
+    color: #f06543;
+}
+.profile-menu-button > :nth-child(2) > ul > li{
+    padding-bottom: 10px;
+}
+.profile-menu-button > :nth-child(2) > ul > li:hover > *{
+    filter: contrast(100);
+}
+.profile-menu-button > :nth-child(2) > ul > li:hover{
+    margin-left: 5px;
+}
+.profile-menu-button:hover > :nth-child(2){
+    visibility: visible;
+    height: 180px;
+}
+
+
+.user-setting-menu {
+    transition: 0s;
+}
+.user-setting-menu > div:hover{
+    filter: contrast(200%);
+    cursor: pointer;
+    color: #f06543;
+}
+
+.cart-item-controller{
+    height: fit-content;
+}
+.cart-item-controller > * {
+    display: grid;
+    place-items: center;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version*/
+}
+.cart-item-controller > *:not(:nth-child(3), :nth-child(1)):hover{
+    cursor: pointer;
+}
+.cart-item-controller > *:not(:nth-child(3), :nth-child(1)):active{
+    transition: ease-in;
+    transform: scale(0.9) scale(1.05);
+}
+
+
+.bank-selector > div > div:hover{
+    cursor: pointer;
+}
+.bank-selector > div > div:active{
+    border-bottom: 4px solid #f06543;
+}
+
+

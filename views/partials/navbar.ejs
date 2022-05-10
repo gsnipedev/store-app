@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow m-3 border rounded-3" style="background-color: #f06543">
+<nav class="navbar navbar-expand-md navbar-dark shadow m-3 border rounded-3" style="background-color: #f06543">
   <div class="container">
     <a class="navbar-brand playfair" href="/">STORE</a>
     <button
@@ -12,12 +12,45 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link" aria-current="page" href="/">Home</a>
         <a class="nav-link" href="/Products">Products</a>
         <a class="nav-link" href="/discover">Discover</a>
         <a class="nav-link" href="/about">About</a>
+      </div>
+      <div class="navbar-nav rounded-3 profile-menu-button" style="display: block">
+        <div
+          class="account-user-display d-flex flex-row p-2 rounded-3 align-items-center"
+          onclick="location.href = '/login' "
+        >
+          <img src="<%= profile_image %>" alt="" width="40px" height="40px" class="rounded-circle me-2" />
+          <span class="nav-link text-light poppin"><%= username %> </span>
+          <span class="badge bg-light text-orange h-100 ms-1">0</span>
+        </div>
+        <div class="text-light roboto shadow bg-light rounded-3">
+          <ul class="p-0 ps-4">
+            <li class="pt-2">
+              <a href="/profile"><i class="fa-solid fa-user"></i> Profile</a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-sack-dollar"></i> Purchases</a>
+            </li>
+            <li>
+              <a href="/cart"
+                ><i class="fa-solid fa-cart-shopping"></i>
+                Cart
+                <span class="badge bg-orange text-light ms-1">0</span></a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-star"></i> Wishlist</a>
+            </li>
+            <li>
+              <a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

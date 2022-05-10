@@ -1,0 +1,22 @@
+.navbar_section{
+    background-color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+.navbar_section ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar_section li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.navbar_section a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 15px;
+}

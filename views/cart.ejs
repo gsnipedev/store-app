@@ -1,0 +1,74 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-8 p-4">
+        <div class="shadow-sm w-100 p-4">
+          <% for( let index = 0; index < 4; index++ ) { %>
+          <div class="row mb-3">
+            <div class="col-5 col-sm-4 col-md-3">
+              <div class="d-flex justify-content-center">
+                <img
+                  src="https://picsum.photos/400/300"
+                  alt=""
+                  class="rounded-3 shadow"
+                  style="aspect-ratio: 10/8; width: 150px"
+                />
+              </div>
+            </div>
+            <div class="col col-md-8 col-xl-9">
+              <div class="text-wrap roboto" style="color: #f06543">
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat libero explicabo sed
+                  temporibus reprehenderit.</span
+                >
+              </div>
+              <div>
+                <span class="roboto text-success">$ 99</span>
+              </div>
+              <div
+                class="float-end text-secondary mt-2 cart-item-controller d-flex justify-content-between align-items-center"
+                style="width: 150px"
+              >
+                <div>
+                  <span class="badge rounded-pill bg-primary">Delete</span>
+                </div>
+                <div>
+                  <span class="badge rounded-pill bg-primary">-</span>
+                </div>
+                <div class="roboto fs-6">0</div>
+                <div>
+                  <span class="badge rounded-pill bg-primary">+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <% } %>
+        </div>
+      </div>
+      <div class="col-xl-4 p-4 position-relative">
+        <div class="shadow-sm w-100 p-4" style="top: 20px; position: sticky">
+          <div class="mb-3">
+            <span class="oswald text-orange">Shopping Summary</span>
+          </div>
+          <div class="mb-3">
+            <span class="roboto">Total Qty</span>
+            <span class="float-end oswald text-dark">1</span>
+          </div>
+          <div class="mb-3">
+            <span class="roboto">Total Discount</span>
+            <span class="float-end oswald text-success">$0</span>
+          </div>
+          <hr />
+          <div class="mb-3">
+            <span class="roboto">Total Price</span>
+            <span class="float-end oswald text-success">$99</span>
+          </div>
+          <div>
+            <button class="btn shadow-none w-100 border-none bg-orange text-light poppin">Checkouts</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

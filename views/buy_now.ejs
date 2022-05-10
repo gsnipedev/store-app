@@ -1,0 +1,76 @@
+<section>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-xl-8 p-2">
+        <div class="shadow-sm p-3 rounded-3">
+          <div class="row">
+            <div class="col-md-5 d-flex justify-content-center">
+              <img src="<%= result.item_image %> " alt="" width="300" class="rounded-3" />
+            </div>
+            <div class="col">
+              <div class="p-3 bg-light shadow-sm" style="border-left: 3px solid #f06543">
+                <p class="poppin fs-4"><%= result.item_name %></p>
+                <p class="oswald text-success">$<%= result.price %></p>
+                <p class="ubuntu"><%= result.item_desc %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 p-2">
+        <div class="shadow-sm p-3 rounded-3 h-100">
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="p-2 text-center">
+          <span class="fs-5 poppin text-orange">Other Payments</span>
+          <div class="w-0">
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <%- include('./partials/ewallet_card.ejs') %> <%- include('./partials/bank_transfer_card.ejs') %>
+    </div>
+  </div>
+</section>
+
+<script src="https://www.paypal.com/sdk/js?client-id=ASaulz95m7CnPFaLULcjPweXR7n0rwSSkgxB7zVDO0dGtdfopXnGX9bxfSMinil2qpaUk8JJw1TOvqk7&components=buttons"></script>
+<script>
+  paypal
+    .Buttons(
+      {
+        createOrder: function (data, actions) {
+          // Set up the transaction
+          return actions.order.create({
+            purchase_units: [
+              {
+                amount: {
+                  value: "1.00",
+                },
+              },
+            ],
+          });
+        },
+      },
+      {
+        style: {
+          layout: "vertical",
+          color: "gold",
+          shape: "rect",
+          label: "paypal",
+        },
+      },
+      {
+        onApprove: function () {
+          window.location.href = "/thankyou";
+        },
+      }
+    )
+    .render("#paypal-button-container");
+</script>
