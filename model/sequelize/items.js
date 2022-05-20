@@ -23,6 +23,10 @@ module.exports = function () {
         max: 50,
       },
     },
+    category: {
+      allowNull: false,
+      type: DataTypes.STRING,
+    },
     item_desc: {
       allowNull: false,
       type: DataTypes.STRING,

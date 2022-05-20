@@ -1,7 +1,7 @@
 <section class="m-3">
   <div class="container">
     <div class="row d-flex justify-content-between">
-      <div class="col-md-3 bg-orange p-2 rounded-3 shadow mb-5">
+      <div class="col-12 col-md-6 col-lg-4 bg-orange p-2 rounded-3 shadow mb-5">
         <div class="p-4 text-light ubuntu fs-5 admin-menu-list">
           <ul class="nav flex-column admin-menu-list">
             <li class="nav-item">
@@ -11,7 +11,7 @@
               <a class="nav-link">Items Management</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Orders</a>
+              <a class="nav-link" href="#orders">Orders</a>
             </li>
             <li class="nav-item">
               <a class="nav-link">smth</a>
@@ -35,7 +35,7 @@
         </div>
       </div>
       <div
-        class="col-md-4 p-2 mb-5 border-orange shadow bg-light rounded-3 d-flex align-items-center justify-content-center"
+        class="col-12 col-md-6 col-lg-4 p-2 mb-5 border-orange shadow bg-light rounded-3 d-flex align-items-center justify-content-center"
       >
         <div class="ubuntu">
           <div class="col-12 text-light p-3 rounded-3" style="border: 3px solid white">
@@ -63,9 +63,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 p-4 rounded-3">
+      <div class="col-12 col-md-6 col-lg-4 p-4 rounded-3">
         <div class="row bg-primary rounded-3 text-light p-3 shadow">
-          <h1 class="text-center ubuntu">912</h1>
+          <h1 class="text-center ubuntu"><%= response.length %></h1>
           <h4 class="text-center ubuntu">Orders</h4>
         </div>
         <div class="row bg-success rounded-3 text-light p-3 shadow mt-3">
@@ -73,10 +73,12 @@
           <h4 class="text-center ubuntu">Revenue</h4>
         </div>
         <div class="row bg-secondary rounded-3 text-light p-3 shadow mt-3">
-          <h1 class="text-center ubuntu">512</h1>
+          <h1 class="text-center ubuntu"><%= comment_count %></h1>
           <h4 class="text-center ubuntu">Comments</h4>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<%- include("partials/orders.ejs", {response: response}) %>

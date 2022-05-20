@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <hr />
+    </div>
+  </div>
+  <% for( let index = 0; index < 3; index++ ) { %>
+
+  <div class="shadow rounded-super row mb-5 <% if (index % 2 == 0) { %> flex-row-reverse <% } %>">
+    <div class="col-md-7 p-4 d-flex flex-column">
+      <div class="oswald text-dark">
+        <h1>Amazing Stuffs</h1>
+      </div>
+      <div class="poppin">
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur rerum cupiditate voluptatum quo tempora
+          earum qui ab non distinctio obcaecati reiciendis magnam, placeat exercitationem, sunt iure, est quae rem
+          amet!</span
+        >
+      </div>
+      <div class="ubuntu">
+        <span
+          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique voluptatem aut veniam facere? Ratione
+          animi corporis consectetur possimus dicta tempora veritatis quas ad minus tenetur mollitia consequatur sit,
+          similique deleniti.</span
+        >
+      </div>
+      <div class="mb-3 mt-3" style="margin-top: auto">
+        <button class="btn bg-orange text-light poppin" type="button" id="button-addon2">Discover</button>
+      </div>
+      <div class="oswald" style="margin-top: auto">
+        <span class="fs-3">Start from <span class="text-success ubuntu">$900</span></span>
+      </div>
+    </div>
+    <div class="col-md-5 overflow-hidden d-flex justify-content-end p-0">
+      <img src="https://picsum.photos/1080/720" alt="" class="rounded-super img-fluid" />
+    </div>
+  </div>
+  <% } %>
+</div>

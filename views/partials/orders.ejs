@@ -1,0 +1,63 @@
+<section id="orders">
+  <div class="container">
+    <div class="btn-group mb-2">
+      <button
+        type="button"
+        class="btn text-light bg-orange dropdown-toggle poppin"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        All Payment
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item text-orange poppin" href="?filter=pending">Pending Payments</a></li>
+        <li><a class="dropdown-item text-orange poppin" href="#">Setlements</a></li>
+        <li><a class="dropdown-item text-orange poppin" href="#">Success Payments</a></li>
+
+        <li><hr class="dropdown-divider" /></li>
+        <li><a class="dropdown-item text-orange poppin" href="#">All Payments</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <% response.forEach(element => { %>
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2">
+        <div class="shadow-sm border">
+          <div class="card-body">
+            <div class="mb-2">
+              <img src="img/payment/<%= element.platform_name %>.png" alt="" height="40" />
+            </div>
+            <div class="mb-3">
+              <span class="card-title fs-6 poppin text-break"><%= element.order_id %></span>
+            </div>
+            <h6 class="card-subtitle mb-2 text-uppercase"><%= element.transaction_status %></h6>
+            <p class="card-text oswald text-success"><%= format.format(element.gross_amount) %></p>
+            <form action="admin/paymentDetails/" method="GET">
+              <input type="hidden" name="orderId" value="<%= element.order_id %>" />
+              <button type="submit" class="btn btn-success form-control mb-2 oswald">Details</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
