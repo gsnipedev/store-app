@@ -4,14 +4,19 @@
     style="overflow: hidden"
     onclick="location.href = '/discover/<%= element.item_id %>'"
   >
-    <img src="<%= element.item_image %> " class="card-img-top rounded-3" alt="product" style="height: 150px" />
+    <img
+      src="<%= element.item_image %> "
+      class="card-img-top img-thumbnail rounded-3"
+      alt="product"
+      style="aspect-ratio: 10/9"
+    />
     <div class="card-body p-2">
       <div style="text-overflow: ellipsis; overflow: hidden; white-space: nowrap">
         <span class="card-text poppin"><%= element.item_name %> </span>
       </div>
       <div style="height: 50px">
         <div>
-          <span style="font-size: 13px" class="text-secondary"><%= element.category %> </span>
+          <span style="font-size: 13px" class="text-secondary">category</span>
         </div>
         <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap">
           <span style="font-size: 14px"><%= element.item_desc %></span>

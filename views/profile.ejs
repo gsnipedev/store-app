@@ -13,8 +13,8 @@
             </div>
 
             <div
-              class="badge rounded-pill text-orange fs-6 rounded-circle"
-              style="transform: translateY(-17px); border-top: 4px solid #f06543; background-color: white"
+              class="badge rounded-pill bg-light text-orange fs-6 rounded-circle"
+              style="transform: translateY(-17px); border-top: 4px solid #f06543"
             >
               <%= rank %>
             </div>
@@ -22,7 +22,7 @@
           <div class="text-center mb-2">
             <span class="badge text-orange fs-4" style="border-bottom: 4px solid #f06543"><%= username %> </span>
             <div>
-              <span class="text-secondary oswald">Spam Machine <i class="fa-solid fa-gears"></i></span>
+              <span class="text-secondary roboto">The Auditor</span>
             </div>
           </div>
           <div class="user-setting-menu">
@@ -53,7 +53,7 @@
       <div class="col-xl-8 p-4 pt-0">
         <div class="p-4 rounded-3 shadow h-100">
           <div class="text-center mb-2 poppin">
-            <span>Transactions Made</span>
+            <span>Pending Transaction</span>
           </div>
           <div class="row">
             <% response.forEach((element,index) => { %>
@@ -69,11 +69,10 @@
                 </div>
                 <div class="mb-4">
                   <span class="ubuntu">Total Payment</span>
-                  <h5 class="poppin fs-5 text-success"><%= format.format(element.gross_amount)%></h5>
-                  <span class="poppin transaction_status"><%= element.transaction_status.toUpperCase() %></span>
+                  <h5 class="poppin fs-5 text-success"><%= format.format(element.gross_amount) %></h5>
                 </div>
                 <div>
-                  <a href="/thankyou/1/<%= element.order_id %> " style="text-decoration: none">
+                  <a href="" style="text-decoration: none">
                     <span class="poppin text-orange">Details</span>
                   </a>
                 </div>

@@ -4,7 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
+body{
+    height: 300vh;
+}
 .roboto{
     font-family: 'Roboto', sans-serif;
 }
@@ -47,13 +49,6 @@
 }
 .border-orange-sm{
     border: 2px solid #f06543;
-}
-.rounded-super{
-    border-radius: 15px;
-}
-.rounded-super-right{
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
 }
 .admin-menu-list > li > a{
     text-decoration: none;
